@@ -5,7 +5,7 @@ from io import BytesIO
 
 
 def text_on_image(image, text, font_size, color):
-    req = requests.get("https://github.com/googlefonts/roboto/blob/master/src/hinted/Roboto-Regular.ttf?raw=true")
+    req = requests.get('https://github.com/googlefonts/roboto/blob/master/src/hinted/Roboto-Regular.ttf?raw=true')
     img = Image.open(image)
     font = ImageFont.truetype(BytesIO(req.content), font_size)
     draw = ImageDraw.Draw(img)
