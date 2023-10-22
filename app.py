@@ -1,10 +1,12 @@
 import streamlit as st
 from PIL import Image, ImageFont, ImageDraw
+from io import BytesIO
 
 
 def text_on_image(image, text, font_size, color):
+    req = requests.get("https://github.com/googlefonts/roboto/blob/master/src/hinted/Roboto-Regular.ttf?raw=true")
     img = Image.open(image)
-    font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeSans.ttf', font_size)
+    font = ImageFont.truetype(BytesIO(req.content), font_size)
     draw = ImageDraw.Draw(img)
 
     iw, ih = img.size
