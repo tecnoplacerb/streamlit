@@ -11,8 +11,8 @@ def text_on_image(image, text, font_size, color):
     draw = ImageDraw.Draw(img)
 
     iw, ih = img.size
-    fw, fh = (200,40)
-    left, top, right, bottom = font.getbbox(text)
+    #fw, fh = (200,40)
+    left, top, right, botton = font.getbbox(text)
     tw = right - left
     th = botton - top
 
