@@ -12,11 +12,10 @@ def text_on_image(image, text, font_size, color):
 
     iw, ih = img.size
     #fw, fh = (200,40)
-    print(font.getmask(text))
-    fw, fh = font.getmask(text)
+    tw, th = draw.textsize(text, font=font)
 
     draw.text(
-        ((iw - fw) / 2, (ih - fh) / 2),
+        ((iw - tw) / 2, (ih - th) / 2),
         text,
         fill=color,
         font=font
