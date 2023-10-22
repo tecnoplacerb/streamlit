@@ -4,7 +4,7 @@ from PIL import Image, ImageFont, ImageDraw
 
 def text_on_image(image, text, font_size, color):
     img = Image.open(image)
-    font = ImageFont.truetype('/usr/share/fonts/truetype/noto/NotoMono-Regular.ttf', font_size)
+    font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeSans.ttf', font_size)
     draw = ImageDraw.Draw(img)
 
     iw, ih = img.size
