@@ -11,7 +11,7 @@ def text_on_image(image, text, font_size, color):
     draw = ImageDraw.Draw(img)
 
     iw, ih = img.size
-    fw, fh = font.getsize(text)
+    fw, fh = 200
 
     draw.text(
         ((iw - fw) / 2, (ih - fh) / 2),
